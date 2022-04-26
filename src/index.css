@@ -9,17 +9,14 @@
   letter-spacing: 1.5;
 }
 .footer {
-  text-align: center;
-  padding: 1em;
-  place-items: center;
-  display: grid;
-  font-size: 1rem;
-  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  background-color: #0077b5;
+  padding: 1rem;
   width: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: max-content;
-  color: aliceblue;
+  overflow: hidden;
+  text-align: center;
+  color: white;
 }
 .footer h2 {
   font-size: 1rem;

@@ -59,7 +59,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 1em;
 }
@@ -154,7 +154,20 @@ h3 {
     align-items: center;
   }
   .price-details {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     margin-right: 10px;
+  }
+  .cart-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+  .cart-btns button {
+    font-size: 0.8rem;
+    display: block;
+  }
+  .clr-btn {
+    margin-top: 10px;
   }
 }

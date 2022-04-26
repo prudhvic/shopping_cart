@@ -13,3 +13,8 @@
   background-color: white;
   color: brown;
 }
+.flex {
+  display: grid;
+  place-content: center;
+  height: 50vh;
+}
