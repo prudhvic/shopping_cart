@@ -1,0 +1,61 @@
+.singleProduct {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 2rem;
+  padding: 2em;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  margin-top: 3rem;
+  flex-grow: 3;
+}
+.gallery {
+  margin-right: 1rem;
+}
+.pics {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+
+.pics img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  transition: 0.5s;
+}
+.main {
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  transition: 0.5s;
+}
+.singleProduct h2 {
+  font-size: 1.4rem;
+}
+.details {
+  display: grid;
+  gap: 0.5rem;
+}
+.details p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.calcs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.calcs h3 {
+  font-weight: 400;
+}
+@media (max-width: 960px) {
+  .singleProduct {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1em;
+    margin-top: 1rem;
+  }
+  .gallery {
+    margin-right: 0;
+  }
+}
