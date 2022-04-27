@@ -70,6 +70,14 @@
 a:focus {
   color: black;
 }
+.nav button {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+}
 @media (max-width: 960px) {
   .header {
     width: 100%;

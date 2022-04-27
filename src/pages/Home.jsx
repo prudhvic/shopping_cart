@@ -11,18 +11,13 @@ const Home = () => {
     <React.Fragment>
       <main className={styles.container}>
         <section>
-          <motion.h2
-            initial={{ opacity: 0, x: "-100%" }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            Design Your Comfort Zone
-          </motion.h2>
-          <motion.p initial={{ x: "50%" }} animate={{ x: 0 }}>
+          <h2>Design Your Comfort Zone</h2>
+          <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
             sed omnis corporis doloremque possimus velit! Repudiandae nisi odit,
             aperiam odio ducimus, obcaecati libero et quia tempora excepturi
             quis alias?
-          </motion.p>
+          </p>
           <Link to="/products">shop Now</Link>
         </section>
         <section>

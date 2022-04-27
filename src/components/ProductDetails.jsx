@@ -7,7 +7,7 @@ import AmountButton from "./AmountButton";
 const ProductDetails = ({ colors }) => {
   let { single_product } = useProductsContext();
   let { addToCart } = useCartContext();
-  let [amount, setAmount] = useState(0);
+  let [amount, setAmount] = useState(1);
   console.log("k", addToCart);
   console.log(single_product);
   let { id } = single_product;

@@ -4,10 +4,12 @@ import logo from "../images/logo.png";
 import { FaShoppingCart } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 import { useCartContext } from "../utils/context/CartContext";
+import { UserPorvider } from "../utils/context/UserContext";
 const Navbar = () => {
   console.log(styles);
   let { cart, total_items } = useCartContext();
   console.log(total_items);
+  let { login, logout, user } = UserPorvider();
   return (
     <header className={styles.header}>
       <Link to="/">
@@ -58,16 +60,31 @@ const Navbar = () => {
               <span className={styles["cart-items"]}>{total_items}</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              style={(props) =>
-                props.isActive ? { color: "red" } : { color: "black" }
-              }
-              to="/checkout"
-            >
-              checkout
-            </NavLink>
-          </li>
+          {user && (
+            <li>
+              <NavLink
+                style={(props) =>
+                  props.isActive ? { color: "red" } : { color: "black" }
+                }
+                to="/checkout"
+              >
+                checkout
+              </NavLink>
+            </li>
+          )}
+          {!user ? (
+            <li>
+              <button onClick={login}>Login</button>
+            </li>
+          ) : (
+            <li>
+              <button
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                logout
+              </button>
+            </li>
+          )}
         </ul>
       </nav>
     </header>
