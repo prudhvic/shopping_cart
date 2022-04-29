@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -8,9 +8,7 @@ import ProductContextProvider from "./utils/context/ProductContext";
 import FilterContextProvider from "./utils/context/FilterContext";
 import CartContextProvider from "./utils/context/CartContext";
 import UserContextProvider from "./utils/context/UserContext";
-//dev-otx3ckk6.us.auth0.com
-//lrL1fQWXzNB8mmzLOIfIH7KXUMCyJn4A
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Auth0Provider
@@ -29,5 +27,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </UserContextProvider>
       </Auth0Provider>
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

@@ -13,6 +13,8 @@ import Error from "./pages/Error";
 import PrivateRoute from "./PrivateRoute";
 import AuthWrapper from "./pages/AuthWrapper";
 function App() {
+  console.log("hI", import.meta.env.REACT_STRIPE_PUBLIC_KEY);
+
   return (
     <div className="App">
       <Navbar />

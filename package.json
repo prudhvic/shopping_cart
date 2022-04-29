@@ -9,11 +9,17 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.10.0",
+    "@stripe/react-stripe-js": "^1.7.2",
+    "@stripe/stripe-js": "^1.29.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.0",
     "framer-motion": "^6.3.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
+    "stripe": "^8.219.0",
+    "styled-components": "^5.3.5",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
