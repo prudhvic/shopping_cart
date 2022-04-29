@@ -3,21 +3,10 @@ import { createContext, useState, useEffect, useContext } from "react";
 let UserContext = createContext({});
 export default function UserContextProvider({ children }) {
   let [Myuser, setMyUser] = useState(null);
-  const {
-    user,
-    isAuthenticated,
-    isLoading,
-    loginWithRedirect: login,
-    logout,
-  } = useAuth0();
+  const { user, loginWithRedirect: login, logout } = useAuth0();
   useEffect(() => {
-    if (isAuthenticated) {
-      setMyUser(user);
-    } else {
-      setMyUser(null);
-    }
-    console.log("user", user, isAuthenticated);
-  }, [isAuthenticated]);
+    setMyUser(user);
+  }, [user]);
   return (
     <UserContext.Provider value={{ login, logout, user: Myuser }}>
       {children}
