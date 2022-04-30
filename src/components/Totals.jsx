@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../utils/context/CartContext";
 import { UserPorvider } from "../utils/context/UserContext";
 import Format from "../utils/func/Format";
@@ -12,8 +13,17 @@ const Totals = () => {
       <h2>shipping fee:{Format(shipping_fee)}</h2>
       <hr />
       <h3>Order Total:{Format(shipping_fee + total_price)}</h3>
-      {!user && <button onClick={login}>Login</button>}
-      {user && <button> proceed to checkout</button>}
+      {!user && (
+        <button className="btn" onClick={login}>
+          Login
+        </button>
+      )}
+      {user && (
+        <Link to="/checkout" className="btn">
+          {" "}
+          proceed to checkout
+        </Link>
+      )}
     </div>
   );
 };

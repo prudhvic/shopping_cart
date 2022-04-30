@@ -23,3 +23,12 @@
   display: grid;
   place-items: center;
 }
+.btn {
+  border: none;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
