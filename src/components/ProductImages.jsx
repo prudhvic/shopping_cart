@@ -17,6 +17,7 @@ const ProductImages = ({ pics }) => {
         {pics &&
           pics.map((pic) => (
             <img
+              loading="lazy"
               src={pic.url}
               key={pic.id}
               onClick={() => setMain({ url: pic.url })}

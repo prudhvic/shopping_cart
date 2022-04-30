@@ -18,7 +18,7 @@ const CartList = () => {
             {cart.map((item) => (
               <div className="cart-item">
                 <div className="flex-details">
-                  <img src={item.image} />
+                  <img src={item.image} loading="lazy" />
                   <div className="details">
                     <h2>{item.name}</h2>
                     <h3>Color:{item.color}</h3>
